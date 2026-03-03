@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard Pro</title>
+    <link rel="stylesheet" href="7.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn">Search</button>
+            </div>
+            <button id="location-btn" title="Use Current Location">
+                <span class="loc-icon">📍</span> Use My Location
+            </button>
+        </div>
+
+        <div id="recent-searches" class="history-container"></div>
+
+        <div id="loading" style="display: none;">Fetching Data...</div>
+
+        <div id="weather-result" class="weather-card">
+            <h2 id="city-name"></h2>
+            <p id="local-time" class="time-display"></p>
+            
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <p id="temperature"></p>
+            <p id="description"></p>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <span>Humidity</span>
+                    <p id="humidity">--</p>
+                </div>
+                <div class="detail-item">
+                    <span>Wind Speed</span>
+                    <p id="wind-speed">--</p>
+                </div>
+            </div>
+
+            <div id="forecast-container">
+                <hr>
+                <h3>Next 3 Days</h3>
+                <div id="forecast-list" class="forecast-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="7.js"></script>
+</body>
+</html>
